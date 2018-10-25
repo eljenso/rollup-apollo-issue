@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["es5", "es6", "dom", "es2015", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "esnext",
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
