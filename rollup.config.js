@@ -16,10 +16,6 @@ export default {
   },
 
   plugins: [
-    del({ targets: `${outputFolder}/*` }),
-
-    typescript(),
-    resolve(),
     commonjs({
       namedExports: {
         // The commonjs plugin can't figure out the exports of some modules, so if rollup gives warnings like:
@@ -245,10 +241,11 @@ export default {
         "node_modules/react-dom/server.js": ["renderToString"]
       }
     }),
-
+    del({ targets: `${outputFolder}/*` }),
+    typescript(),
+    resolve(),
     globals(),
     builtins(),
-
     postcss({
       extensions: [".css", ".sss", ".pcss", ".less", ".scss"]
     })
